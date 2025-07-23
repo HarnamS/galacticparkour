@@ -1,7 +1,7 @@
 import pygame, time, random
 
 #  INIT & CONSTANTS 
-
+pygame.mixer.quit()
 pygame.init()
 SCREEN_WIDTH, SCREEN_HEIGHT = 800, 600
 WHITE, BLACK, RED, GREEN, BLUE, ORANGE, PURPLE = (255,255,255), (0,0,0), (255,0,0), (0,255,0), (0,0,255), (255,165,0), (128,0,128)
@@ -45,6 +45,9 @@ def load_spritesheet(filename):
     return frames
 
 #  LOAD SOUNDS & IMAGES 
+pygame.mixer.music.load("epicmusic.mp3")
+pygame.mixer.music.set_volume(0.5)
+pygame.mixer.music.play(-1)
 laser_sound = pygame.mixer.Sound("lazer.mp3")
 explosion_sound = pygame.mixer.Sound("explosion.mp3")
 
