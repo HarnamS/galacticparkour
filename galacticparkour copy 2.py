@@ -1,7 +1,7 @@
 import pygame, time, random
 
 #  INIT & CONSTANTS 
-pygame.mixer.quit()
+pygame.mixer.init()
 pygame.init()
 SCREEN_WIDTH, SCREEN_HEIGHT = 800, 600
 WHITE, BLACK, RED, GREEN, BLUE, ORANGE, PURPLE = (255,255,255), (0,0,0), (255,0,0), (0,255,0), (0,0,255), (255,165,0), (128,0,128)
